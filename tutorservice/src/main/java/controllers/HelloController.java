@@ -1,33 +1,30 @@
 package controllers;
 
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-@RestController
+@Controller
 public class HelloController {
 
-	@Autowired
-	private Subscriptions subscriptions;
+//	@Autowired
+//	private Subscriptions subscriptions;
 
-	@GetMapping("/hello")
+	@GetMapping("/hello2")
 	public String index() {
 		return "Greetings from Spring Boot!";
 	}
 
-//	@RequestMapping({"/hello2", "/static/about.html"})
-//	public String hello2() {
-//
-//		return "about";
-//	}
+	@GetMapping({"/hello3", "/static/about.html"})
+	public String hello2() {
 
-	@PostMapping("/hello4")
-	public String hello3(@ModelAttribute Subscriber subscriber) {
+		return "about this";
+	}
+
+	@PostMapping("/hello")
+	public Subscriber hello3(@ModelAttribute Subscriber subscriber) {
 		String name = subscriber.getName();
 		String email = subscriber.getEmail();
 		
@@ -38,7 +35,7 @@ public class HelloController {
 //		// save a couple of customers
 //		subscriptions.save(new Subscriber(name, email));
 
-		return "about";
+		return subscriber;
 	}
 
 }

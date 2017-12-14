@@ -1,6 +1,7 @@
 package controllers;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
 public class Subscriber {
 
