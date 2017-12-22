@@ -4,7 +4,7 @@ import org.springframework.data.annotation.Id;
 
 public class Student {
 
-	@Id
+//	@Id
 	public String id;
 	
 	String firstName;
