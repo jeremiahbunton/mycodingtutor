@@ -46,7 +46,7 @@ public class GreetingController {
 	public String greeting1(@ModelAttribute Subscriber subscriber, Model model) {
 		System.out.println(subscriber.getEmail());
 		System.out.println(subscriber.getName());
-		sendEmail(subscriber.getName(), subscriber.getEmail(), "Test", "This is a test222");
+//		sendEmail(subscriber.getName(), subscriber.getEmail(), "Test", "This is a test222");
 		model.addAttribute("subscriber", new Subscriber());
 		return "about";
 	}
@@ -61,7 +61,7 @@ public class GreetingController {
 	public String indexSubmit(@ModelAttribute Subscriber subscriber, Model model) {
 		System.out.println(subscriber.getEmail());
 		System.out.println(subscriber.getName());
-		sendEmail(subscriber.getName(), subscriber.getEmail(), "Test", "This is a test222");
+//		sendEmail(subscriber.getName(), subscriber.getEmail(), "Test", "This is a test222");
 		model.addAttribute("subscriber", new Subscriber());
 		return "index";
 	}
@@ -114,7 +114,7 @@ public class GreetingController {
 		Session session = Session.getDefaultInstance(props,
 				new javax.mail.Authenticator() {
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("jeremiahbunton","Surferdude10");
+				return new PasswordAuthentication("jeremiahbunton","");
 			}
 		});
 
