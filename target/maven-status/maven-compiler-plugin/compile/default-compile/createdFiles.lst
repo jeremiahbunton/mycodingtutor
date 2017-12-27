@@ -1,0 +1,8 @@
+controllers/Subscriptions.class
+controllers/HelloController.class
+database/Teacher.class
+controllers/StudentRepository.class
+controllers/Subscriber.class
+database/Student.class
+controllers/App.class
+database/Meeting.class
